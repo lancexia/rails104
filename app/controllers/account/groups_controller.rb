@@ -5,4 +5,8 @@ class Account::GroupsController < ApplicationController
       @groups = current_user.participated_groups
     end
 
+    def edit
+      @groups = Group.find(params[:id])
+    end
+
 end
